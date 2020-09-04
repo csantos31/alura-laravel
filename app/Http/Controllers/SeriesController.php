@@ -25,7 +25,7 @@ class SeriesController extends Controller
             'mensagem',
             "Serie {$serie->id} criada com sucesso {$serie->nome}");
 
-        return redirect("/series");
+        return redirect()->route('listar_series');
     }
 
     public function destroy(Request $request){
@@ -35,6 +35,6 @@ class SeriesController extends Controller
             'mensagem',
             "Serie removida com sucesso!");
 
-        return redirect("/series");
+        return redirect()->route('listar_series');
     }
 }
